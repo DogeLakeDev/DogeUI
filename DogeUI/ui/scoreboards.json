@@ -1,0 +1,81 @@
+{
+    "namespace": "scoreboard",
+    "scoreboard_sidebar": {
+        "type": "panel",
+        "size": [
+            "100%c",
+            "100%c"
+        ],
+        "offset": [-2, 8],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "ignored": "$scoreboards_feature_disabled",
+        "controls": [
+            {
+                "players": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100%c",
+                        "100%c"
+                    ],
+                    "orientation": "horizontal",
+                    "collection_name": "scoreboard_players",
+                    "factory": {
+                        "name": "player_list_factory",
+                        "control_name": "scoreboard.content"
+                    },
+                    "bindings": [
+                        {
+                            "binding_name": "#scoreboard_sidebar_size",
+                            "binding_type": "global",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_name": "#scoreboard_sidebar_visible",
+                "binding_type": "global",
+                "binding_name_override": "#visible"
+            }
+        ],
+        "variables": []
+    },
+    "content": {
+        "type": "panel",
+        "size": ["100%cm + 3px", "100%cm"],
+        "draggable": "horizontal",
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text_alignment":"right",
+                    "text": "#player_name_sidebar",
+                    "shadow": true,
+                    "layer": 2,
+                    "offset": [
+                        -8,
+                        -8
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#player_name_sidebar",
+                            "binding_type": "collection",
+                            "binding_collection_name": "scoreboard_players"
+                        }
+                    ]
+                }
+            }
+            // ,{
+                // "background": {
+                    // "type": "image",
+                    // "texture": "textures/ui/hud_tip_text_background",
+                    // "size": ["100%sm + 4px", "100%sm + 6px"],
+                    // "alpha": 0.5
+                // }
+            // }
+        ]
+    }
+}

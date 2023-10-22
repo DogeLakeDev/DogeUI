@@ -1,0 +1,95 @@
+{
+    "namespace": "header",
+    "header": {
+        "$title|default": "title",
+        "$binding|default": "#title_text",
+        "$close_button_to_button_id": "button.exit_student",
+        "type": "image",
+        "size":["100%",22],
+        "texture": "textures/menu/dialog_top.9",
+        "anchor_from": "top_middle",
+        "anchor_to": "bottom_middle",
+        "controls": [
+            {
+                "title@$title": {}
+            }
+        ]
+    },
+    "title": {
+        "type": "label",
+        "text": "$binding",
+        "font_size": "normal",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "text_alignment": "center",
+        "offset": [
+            0,
+            2
+        ],
+        "size": [
+            "92.5%",
+            "default"
+        ],
+        "bindings": [
+            {
+                "binding_name": "$binding"
+            }
+        ],
+        "controls": [
+            {
+                "close@npc_interact.x_close_button": {
+                    "offset": [
+                        0,
+                        -1
+                    ],
+                    "size": [
+                        "100%y",
+                        "100%"
+                    ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "$visibility_binding_name": "#visible",
+                    "controls": [
+                        {
+                            "default@common.close_button_panel": {
+                                "$close_button_texture": "textures/menu/close_button"
+                            }
+                        },
+                        {
+                            "hover@common.close_button_panel": {
+                                "$close_button_texture": "textures/menu/close_button_hover"
+                            }
+                        },
+                        {
+                            "pressed@common.close_button_panel": {
+                                "$close_button_texture": "textures/menu/close_button_hover"
+                            }
+                        }
+                    ],
+                    "button_mappings": [
+                        {
+                            "from_button_id": "button.menu_select",
+                            "to_button_id": "$close_button_to_button_id",
+                            "mapping_type": "pressed"
+                        },
+                        {
+                            "from_button_id": "button.menu_ok",
+                            "to_button_id": "$close_button_to_button_id",
+                            "mapping_type": "focused"
+                        },
+                        {
+                            "from_button_id": "button.menu_cancel",
+                            "to_button_id": "$close_button_to_button_id",
+                            "mapping_type": "global"
+                        },
+                        {
+                            "from_button_id": "button.menu_cancel",
+                            "to_button_id": "button.menu_exit",
+                            "mapping_type": "global"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

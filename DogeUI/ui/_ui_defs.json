@@ -1,0 +1,9 @@
+{
+  "ui_defs": [
+    "ui/startscreen/doge_title.json",
+    "ui/informationbar/main.json",
+    "ui/menu/form/main.json",
+    "ui/menu/form/long_form.json",
+    "ui/menu/header.json"
+  ]
+}

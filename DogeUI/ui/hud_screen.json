@@ -1,0 +1,103 @@
+{
+    "toggle_button": {
+        "type": "input_panel",
+        "prevent_touch_input": true,
+        "size": [
+            20,
+            "100%"
+        ],
+        "controls": [
+            {
+                "toggle_button@common_toggles.light_text_toggle": {
+                    "$hover_border_visible": false,
+                    "$default_border_visible": false,
+                    "$default_texture": "textures/informationbar/button.png",
+                    "$hover_texture": "textures/informationbar/button.png",
+                    "$pressed_texture": "textures/informationbar/button.png",
+                    "$pressed_no_hover_texture": "textures/informationbar/button.png",
+                    "$toggle_view_binding_name": "$toggle_name",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "icon": {
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "type": "image",
+                    "size": [
+                        14,
+                        14
+                    ],
+                    "layer": 10,
+                    "texture": "$icon"
+                }
+            }
+        ]
+    },
+    "hud_content": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "button": {
+                            "offset": [
+                                48,
+                                0
+                            ],
+                            "type": "input_panel",
+                            "anchor_from": "top_middle",
+                            "prevent_touch_input": true,
+                            "anchor_to": "top_middle",
+                            "size": [
+                                40,
+                                20
+                            ],
+                            "controls": [
+                                {
+                                    "horizontal": {
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "size": [
+                                            "100%",
+                                            "100%"
+                                        ],
+                                        "controls": [
+
+                                            {
+                                                "hud_scoreboard_text_content_button@hud.toggle_button": {
+                                                    "$icon": "textures/informationbar/list.png",
+                                                    "$toggle_name": "hud.hud_scoreboard_toggle"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "hud_toggle@settings_common.option_toggle_control": {
+        "$toggle_name": "hud_toggle"
+    },
+    "hud_scoreboard_toggle@settings_common.option_toggle_control": {
+        "$toggle_name": "hud_scoreboard_toggle"
+    },
+    "root_panel/sidebar": {
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "hud.hud_scoreboard_toggle",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            }
+        ]
+    }
+}

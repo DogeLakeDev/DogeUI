@@ -1,0 +1,32 @@
+{
+	"format_version":2,
+	"contributor":["Shiroha","Voyage1976"],
+	"pack_modules":["Informationbar","ServerMenu","StartScreen"],
+	"header":{
+		"min_engine_version":[
+			1,
+			16,
+			0
+		],
+		"name":"§l§eDoge§r§lUI",
+		"description":"§l一款跨时代的服务器UI。",
+		"uuid":"8558573c-edfb-dfee-6717-e06581291478",
+		"version":[
+			0,
+			5,
+		    0
+		]
+	},
+	"modules":[
+		{
+			"description":"§l§eDoge§r§lUI",
+			"type":"resources",
+			"uuid":"b73bea14-3952-8712-c1e6-3cdb596ab500",
+			"version":[
+				0,
+				5,
+				0
+			]
+		}
+	]
+}

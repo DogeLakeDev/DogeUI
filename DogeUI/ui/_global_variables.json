@@ -1,0 +1,12 @@
+{
+  "$doge_title_white":0.5,
+  "$doge_title_center_in": 0.8,
+  "$doge_title_bottom_start": 0.3,
+  "$doge_title_bottom_in": 0.5,
+  "$form_size": [
+        252,
+        201
+    ],
+    "$form_main_title": "主菜单"
+}
+

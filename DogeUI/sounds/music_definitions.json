@@ -1,0 +1,7 @@
+{
+   "menu" : {
+      "event_name" : "music.menu",
+      "max_delay" : 0,
+      "min_delay" : 0
+   }
+}

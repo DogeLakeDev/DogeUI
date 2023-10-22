@@ -1,0 +1,87 @@
+{
+    "namespace": "doge",
+    "white_loading_background": {
+        "type": "image",
+        "layer": 1,
+        "tiled": true,
+        "tiled_scale": [ 2, 2 ],
+        "texture": "textures/startscreen/white"
+    },
+
+    "doge_title_center": {
+        "type": "image",
+        "bilinear": true,
+        "layer": 1,
+        "texture": "textures/startscreen/title_center",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ "70%", "30%x" ],
+        "offset": [ 0, 0 ],
+        "alpha": "$anim_alpha_title_center"
+    },
+    "doge_title_bottom": {
+        "type": "image",
+        "bilinear": true,
+        "layer": 2,
+        "texture": "textures/startscreen/title_bottom",
+        "size": [ "77%", "35%x" ],
+        "offset": [ 0, "28%y" ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "alpha": "$anim_alpha_title_bottom"
+    },
+
+    "doge_progress_screen_content": {
+        "type": "panel",
+        "layer": 3,
+        "controls": [
+            { "center@doge.doge_title_center": {
+                "variables": [
+                    {
+                        "requires": true,
+                        "$anim_alpha_title_center": "@doge.title_center_anim"
+                    }
+                ]
+            } },
+            { "bottom@doge.doge_title_bottom": {
+                "variables": [
+                    {
+                        "requires": true,
+                        "$anim_alpha_title_bottom": "@doge.title_bottom_anim"
+                    }
+                ]
+            } }
+        ]
+    },
+    "title_center_anim": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 0,
+        "duration": "$doge_title_white",
+        "next": "@doge.title_center_anim1"
+    },
+    "title_center_anim1": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$doge_title_center_in"
+    },
+
+    "title_bottom_anim": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 0,
+        "duration": "(($doge_title_white)+($doge_title_bottom_start))",
+        "next": "@doge.title_bottom_anim1"
+    },
+    "title_bottom_anim1": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$doge_title_center_in"
+    }
+}

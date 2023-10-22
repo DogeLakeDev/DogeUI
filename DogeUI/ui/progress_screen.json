@@ -1,0 +1,28 @@
+{
+    "namespace": "progress",
+    
+
+    "realms_loading_progress_screen": {
+        "$screen_content": "doge.doge_progress_screen_content",
+        "$screen_bg_content": "doge.white_loading_background"
+    },
+
+    "world_loading_progress_screen": {
+        "$screen_content": "doge.doge_progress_screen_content",
+        "$screen_bg_content": "doge.white_loading_background"
+    },
+
+    "world_loading_progress_screen_old@progress_screen": {
+    "$screen_content": "progress.world_convert_modal_progress_screen_content"
+    },
+
+    "overworld_loading_progress_screen@world_loading_progress_screen_old": {
+    "$screen_bg_content": "progress.overworld_loading_background"
+    },
+    "nether_loading_progress_screen@world_loading_progress_screen_old": {
+    "$screen_bg_content": "progress.nether_loading_background"
+    },
+    "theend_loading_progress_screen@world_loading_progress_screen_old": {
+    "$screen_bg_content": "progress.theend_loading_background"
+    }
+}
