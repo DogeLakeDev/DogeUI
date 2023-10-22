@@ -6,4 +6,4 @@ set -e
 git add -A
 git commit -m 'deploy'
 
-git push DogeUI main
+git push dogeui main
