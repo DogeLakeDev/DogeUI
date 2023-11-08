@@ -1,7 +1,7 @@
 {
 	"format_version":2,
 	"contributor":["Shiroha","Voyage1976"],
-	"pack_modules":["Informationbar","ServerMenu","StartScreen"],
+	"pack_modules":["DogePauseScreen","ServerMenu","StartScreen"],
 	"header":{
 		"min_engine_version":[
 			1,
