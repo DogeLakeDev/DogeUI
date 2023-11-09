@@ -10,6 +10,6 @@ A bedrock version of the cross-era server UI.
 - `芸樱绘境`
 
 ## Modules
-- `DogePauseScreen` 全新设计的 美观、高效 的暂停屏幕，同时是一种计分板信息显示的解决方案。
+- `DogePauseScreen` 将计分板作为滑动界面优雅地嵌入到暂停屏幕中，大大增加计分板的用途。
 - ServerMenu 与众不同的全新服务器表单。
 - StartScreen 仿原神样式的进服欢迎界面，留给玩家一个好的印象。
