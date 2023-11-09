@@ -1,0 +1,63 @@
+{
+    "namespace": "Pause_V2",
+    "pause_screen_main_panels": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": []
+    },
+    "icon": {
+        "type": "image",
+        "layer": 3,
+        "size": [
+            28,
+            28
+        ]
+    },
+    "achievements_icon@icon": {
+        "texture": "textures/ui/achievements"
+    },
+    "play_icon@icon": {
+        "texture": "textures/pause/play"
+    },
+    "setting_icon@icon": {
+        "texture": "textures/ui/gear"
+    },
+    "exit_icon@icon": {
+        "texture": "textures/pause/exit"
+    },
+    "changeskin_icon@icon": {
+        "texture": "textures/pause/skin"
+    },
+    "tab_group@common_toggles.light_text_toggle": {
+        "size": ["100%","100%"],
+        "$toggle_state_binding_name": "#toggle_state",
+        "$toggle_group_default_selected": 0,
+        "$radio_toggle_group": true,
+        "$toggle_name": "tab"
+    },
+    "tab_1@tab_group":{
+       "$toggle_view_binding_name": "tab_1",
+       "$toggle_group_forced_index": 0
+    },
+    "tab_2@tab_group":{
+       "$toggle_view_binding_name": "tab_2",
+       "$toggle_group_forced_index": 1
+    },
+    "tab_3@tab_group":{
+       "$toggle_view_binding_name": "tab_3",
+       "$toggle_group_forced_index": 2
+    },
+    "tab_4@tab_group":{
+       "$toggle_view_binding_name": "tab_4",
+       "$toggle_group_forced_index": 3
+    },
+    "tab_5@tab_group":{
+       "$toggle_view_binding_name": "tab_5",
+       "$toggle_group_forced_index": 4
+    },
+}

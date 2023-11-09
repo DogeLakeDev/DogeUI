@@ -18,6 +18,9 @@
             }
         ]
     },
+    "form_empty": {
+    "type":"panel"
+    },
     "form_selector": {
         "type": "panel",
         "anchor_from": "center",

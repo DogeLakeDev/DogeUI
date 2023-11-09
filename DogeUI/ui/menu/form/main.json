@@ -5,11 +5,11 @@
         "size": "$form_size",
         "anchor_from": "center",
         "anchor_to": "center",
-        "offset":[0,5],
-        "controls": [{ "header@header": {} }, { "sidebar@sidebar": {} }]
+        "offset":[0,0],
+        "controls": [{ "header@header": {} }, { "menu@menu": {} }]
     },
     "header@header.header": {
-        "offset": [0, 0],
+        "offset": [0, 7],
         "anchor_to": "center",
         "$title": "title",
         "layer": 1,
@@ -25,10 +25,10 @@
             }
         ]
     },
-    "sidebar": {
+    "menu": {
         "type": "image",
         "size": ["100%", "100%"],
-        "texture": "textures/menu/dialog_background.9",
+        "texture": "textures/menu/form/main/main",
         "controls": [
             {
                 "sidebar_wrapper": {
@@ -45,22 +45,63 @@
         ]
     },
     "sidebar_items": {
-        "type": "collection_panel",
+        "type": "stack_panel",
+        "orientation":"vertical",
         "anchor_from": "top_middle",
         "anchor_to": "top_middle",
-        "collection_name": "form_buttons",
         "size": ["100%", "100%"],
-        "offset":[0,9],
+        "offset":[0,14],
         "controls": [
-            { "0@button": { "size": [80, 60],"offset":[4,4],"$index": 0 } },
-            { "1@button": { "size": [80, 60],"offset":[86,4],"$index": 1 } },
-            { "2@button": { "size": [80, 60],"offset":[168,4],"$index": 2 } },
-            { "3@button": { "size": [140, 60],"offset":[4,66],"$index": 3 } },
-            { "4@button": { "size": [100, 60],"offset":[148,66],"$index": 4 } },
-            { "5@button": { "size": [80, 60],"offset":[4,128],"$index": 5 } },
-            { "6@button": { "size": [80, 60],"offset":[86,128],"$index": 6 } },
-            { "7@button": { "size": [80, 60],"offset":[168,128],"$index": 7 } }
+        {"line1":{
+            "type":"stack_panel",
+            "orientation":"horizontal",
+            "size":["100%",60],
+            "collection_name": "form_buttons",
+            "controls":[
+            { "0@button1": { "$index": 0 ,"$hover_texture":"textures/menu/form/main/01 商店","$pressed_texture":"textures/menu/form/main/01 商店_pressed"} },
+            { "1@button1": { "$index": 1 ,"$hover_texture":"textures/menu/form/main/02 罗盘","$pressed_texture":"textures/menu/form/main/02 罗盘_pressed"} },
+            { "2@button1": { "$index": 2 ,"$hover_texture":"textures/menu/form/main/03 合作社","$pressed_texture":"textures/menu/form/main/03 合作社_pressed"} }
+            ]
+        }},
+        {"line2":{
+            "type":"stack_panel",
+            "size":["100%",60],
+            "orientation":"horizontal",
+            "collection_name": "form_buttons",
+            "controls":[
+            { "3@button2": { "$index": 3 ,"$hover_texture":"textures/menu/form/main/04 天界","$pressed_texture":"textures/menu/form/main/04 天界_pressed"} },
+            { "4@button3": { "$index": 4 ,"$hover_texture":"textures/menu/form/main/05 领地","$pressed_texture":"textures/menu/form/main/05 领地_pressed"} }
+            ]
+        }},
+        {"line3":{
+            "type":"stack_panel",
+            "size":["100%",60],
+            "orientation":"horizontal",
+            "collection_name": "form_buttons",
+            "controls":[
+            { "5@button1": { "$index": 5 ,"$hover_texture":"textures/menu/form/main/06 家","$pressed_texture":"textures/menu/form/main/06 家_pressed"} },
+            { "6@button1": { "$index": 6 ,"$hover_texture":"textures/menu/form/main/07 任务","$pressed_texture":"textures/menu/form/main/07 任务_pressed"} },
+            { "7@button1": { "$index": 7 ,"$hover_texture":"textures/menu/form/main/08 更多","$pressed_texture":"textures/menu/form/main/08 更多_pressed"} }
+            ]
+        }}
         ]
+    },
+    "padding_vertical": {
+        "type":"panel",
+        "size":["100%",2]
+    },
+    "padding": {
+        "type":"panel",
+        "size":[2,60]
+    },
+    "button1@button":{
+        "size": [80, 60]
+    },
+    "button2@button":{
+        "size": [100, 60]
+    },
+    "button3@button":{
+        "size": [140, 60]
     },
     "button@common.button": {
         "anchor_from": "top_left",
@@ -69,10 +110,10 @@
         "$pressed_button_name": "button.form_button_click",
         "locked_control": "locked",
         "controls": [
-            { "default@button_content": { "texture": "textures/menu/shop_item_hover" } },
-            { "hover@button_content": { "texture": "textures/menu/shop_item_hover" } },
-            { "pressed@button_content": { "texture": "textures/menu/shop_item_hover" } },
-            { "locked@button_content": { "texture": "textures/menu/shop_item_selected" } }
+            { "default@button_content": { "texture": "$hover_texture" } },
+            { "hover@button_content": { "texture": "$hover_texture" } },
+            { "pressed@button_content": { "texture": "$pressed_texture" } },
+            { "locked@button_content": { "texture": "$pressed_texture" } }
         ],
         "bindings": [
             { "binding_type": "collection_details", "binding_collection_name": "form_buttons" },

@@ -3,31 +3,5 @@
     "scoreboard_sidebar": {
         "type": "panel",
         "ignored": true
-    },
-    "content": {
-        "type": "image",
-        "size": ["100%cm + 3px", "100%cm"],
-        "contained": true,
-        "draggable": "vertical",
-        "texture": "textures/ui/hud_tip_text_background",
-        "alpha": 0.25,
-        "controls": [
-            {
-                "text": {
-                    "type": "label",
-                    "text_alignment":"left",
-                    "text": "#player_name_sidebar",
-                    "shadow": false,
-                    "layer": 2,
-                    "bindings": [
-                        {
-                            "binding_name": "#player_name_sidebar",
-                            "binding_type": "collection",
-                            "binding_collection_name": "scoreboard_players"
-                        }
-                    ]
-                }
-            }
-        ]
     }
 }
