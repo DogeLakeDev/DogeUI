@@ -16,4 +16,4 @@ A bedrock version of the cross-era server UI.
 
 ## Modules (Abandoned)
 - `仿星穹铁道侧边式服务器表单——SideMenu` [Minebbs](https://www.minebbs.com/resources/sidemenu.6735/)  
-- `信息栏 | TInformation bar` [Minebbs](https://www.minebbs.com/resources/tinformation-bar.5208/)
+- `信息栏 | TInformation bar` [Minebbs](https://www.minebbs.com/resources/tinformation-bar.5208/) 
