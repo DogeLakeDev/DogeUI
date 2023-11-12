@@ -1,0 +1,17 @@
+{
+"chat_bottom_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", 27 ],
+    "min_size": [ "100%", 27 ],
+    "controls": [
+      { "keyboard_button@chat.keyboard_button": {} },
+      { "chat_settings@chat.chat_settings_button": {} },
+      {"host_main_button@host_options.host_main_button": {}},
+      { "text_box@chat.text_edit_box": {} },
+      { "send_button@chat.send_button": { "offset": [ -20, 0 ] } }
+    ]
+  }
+}
