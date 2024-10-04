@@ -1,20 +1,17 @@
 # DogeUI
-A bedrock version of the cross-era server UI.
-
-## Authors
-### Programmer
+一款为 BDS 服务器设计的通用 UI。
+> 本包包含了例子与使用文档，非开箱即用，请进行客制化之后再使用。
+## 🏃🏻 作者
 - `Shiroha77`
 - `ENIACJushi`
-### Desginer&Art designer
-- `CnData07`
-- `芸樱绘境`
 
-## Modules
-- `DogeChatInfo` 在聊天屏幕增加一个按钮来展示图片，可以用于查看服务器常用指令或公告等。[Minebbs](https://www.minebbs.com/resources/dogechatinfo.6828/)  
-- `DogePauseScreen` 将计分板作为滑动界面优雅地嵌入到暂停屏幕中，大大增加计分板的用途。[Minebbs](https://www.minebbs.com/resources/dogepausescreen.6812/)  
-- `ServerMenu` 与众不同的全新服务器表单。  
-- `StartScreen` 仿原神样式的进服欢迎界面，留给玩家一个好的印象。[Minebbs](https://www.minebbs.com/resources/6569/)
-
-## Modules (Abandoned)
-- `仿星穹铁道侧边式服务器表单——SideMenu` [Minebbs](https://www.minebbs.com/resources/sidemenu.6735/)  
-- `信息栏 | TInformation bar` [Minebbs](https://www.minebbs.com/resources/tinformation-bar.5208/) 
+## 🍔 组件
+| 模块名             | 介绍                                                                   | 分包链接                                                 | 是否弃用（停止更新） |
+|--------------------|------------------------------------------------------------------------|----------------------------------------------------------|----------------------|
+| DogeStartScreen    | 进服欢迎界面                                                           | https://www.minebbs.com/resources/6569/                  | 否                   |
+| DogeMenu           | 自定义菜单实例                                                         |                                                          | 否                   |
+| 底部水印信息       | 底部水印信息                                                           |                                                          | 否                   |
+| 自定义图片标题实例 | 自定义图片标题实例                                                     |                                                          | 否                   |
+| DogePauseScreen    | 暂停屏幕文字信息显示                                                   | https://www.minebbs.com/resources/dogepausescreen.6812/  | 否                   |
+| DogeChatInfo       | 在聊天屏幕增加一个按钮来展示图片，可以用于查看服务器常用指令或公告等。 | https://www.minebbs.com/resources/dogechatinfo.6828/     | 是                   |
+| DogePauseScreen    | 计分板顶部信息显示
