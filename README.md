@@ -1,9 +1,20 @@
 # DogeUI
+![](./pack_icon.png)
 一款为 BDS 服务器设计的通用 UI。
+![GitHub Repo stars](https://img.shields.io/github/stars/DogeLakeDev/DogeUI)
+![GitHub License](https://img.shields.io/github/license/DogeLakeDev/DogeUI)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/DogeLakeDev/DogeUI/total)
+![GitHub contributors](https://img.shields.io/github/contributors/DogeLakeDev/DogeUI)
+![GitHub last commit](https://img.shields.io/github/last-commit/DogeLakeDev/DogeUI)
+
 > 本包包含了例子与使用文档，非开箱即用，请进行客制化之后再使用。
+
 ## 🏃🏻 作者
+
 - `Shiroha77`
 - `ENIACJushi`
+## 🌠展示
+![](./mods.png)
 
 ## 🍔 组件
 | 模块名             | 介绍                                                                   | 分包链接                                                 | 是否弃用（停止更新） |
