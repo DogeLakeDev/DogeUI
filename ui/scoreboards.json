@@ -1,0 +1,81 @@
+{
+    "namespace": "scoreboard",
+    "scoreboard_sidebar": {
+        "type": "panel",
+        "size": ["100%c", 0],
+        "$scoreboard_offset|default": [-8, 5],
+        "$scoreboard_alignment": "top_right",
+        "offset": "$scoreboard_offset",
+        "anchor_from": "$scoreboard_alignment",
+        "anchor_to": "$scoreboard_alignment",
+        //"ignored": "$scoreboards_feature_disabled",
+        "controls": [
+            {
+                "players": {
+                    "type": "stack_panel",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": ["100%c", "100%c"],
+                    "orientation": "horizontal",
+                    "collection_name": "scoreboard_players",
+                    "factory": {
+                        "name": "player_list_factory",
+                        "control_name": "scoreboard.doge_style"
+                    },
+                    "bindings": [
+                        {
+                            "binding_name": "#scoreboard_sidebar_size",
+                            "binding_type": "global",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_name": "#scoreboard_sidebar_visible",
+                "binding_type": "global",
+                "binding_name_override": "#visible"
+            }
+        ]
+    },
+
+    "doge_style": {
+        "type": "panel",
+        "size": ["110%cm + 3px", "110%cm"],
+        "draggable": "horizontal",
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text": "#player_name_sidebar",
+                    "shadow": true,
+                    "layer": 2,
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-6, 3],
+                    "font_size": "normal",
+                    "bindings": [
+                        {
+                            "binding_name": "#player_name_sidebar",
+                            "binding_type": "collection",
+                            "binding_collection_name": "scoreboard_players"
+                        }
+                    ]
+                }
+            },
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/hud_tip_text_background",
+                    "alpha": 0.4,
+                    "size": ["100%sm + 4px", "100%sm + 6px"],
+                    "offset": [-4, 0],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right"
+                }
+            }
+        ]
+    }
+}

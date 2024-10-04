@@ -1,0 +1,12 @@
+{
+    "$doge_title_white": 0.5,
+    "$doge_title_center_in": 0.8,
+    "$doge_title_bottom_start": 0.3,
+    "$doge_title_bottom_in": 0.5,
+    "$longform_size": [ 225, 200 ],
+    "$customform_size": [ 225, 200 ],
+    "$doge_panel_indent_size":["88%","39%x"],
+
+    "$doge_pause_text": "TIPS:使用泥土*1 合成或使用命令/menu give 即可获得要石；输入/m 可直接打开菜单。\n§l官网：§rwww.dogelake.cn\n- 在官网可以上传图片制作地图画喔！\n§lQQ群：§r688524595\n§l犬明湖地图站：§rmap.dogelake.cn/map\n§lDogeUI版本：§r1.3.0_犬明湖定制版本\n§l项目地址：§rhttps://github.com/DogeLakeDev/DogeUI",
+    "$doge_copyright_info":"DogeUI 1.3.0.241003_alpha_dlcustom"
+}

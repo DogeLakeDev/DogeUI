@@ -1,0 +1,40 @@
+{
+    "namespace": "ad",
+    "main": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "header@doge_common.header": {
+                    "$form_title":"广告"
+                }
+            },
+            {
+                "img@img": {}
+            },
+            {
+                "@doge_common.background": {}
+            }
+        ]
+    },
+    "img": {
+        "type": "image",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "texture": "",
+        
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "doge_ad",
+                "source_property_name": "#title",
+                "target_property_name": "#texture"
+            }
+        ]
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "namespace": "form_main",
+    "main": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [{"header@doge_common.header": { "$form_title":"主菜单" }},{"background@doge_common.background": {}},{"items_m@form_main.items": {}}]
+    },
+    "items": {
+        "type": "stack_panel",
+        "orientation":"horizontal",
+        "size": "$doge_panel_indent_size",
+        "controls": [{"1@form_main.items_1": {}},{"2@form_main.items_2": {}}]
+    },
+    "items_1": {
+        "type": "stack_panel",
+        "orientation":"vertical",
+        "size":["50%","100%"],
+        "controls": [
+        {"line1":{
+            "type":"stack_panel",
+            "orientation":"horizontal",
+            "size":["100%","33.33%"],
+            "collection_name": "form_buttons",
+            "controls":[
+            { "0@button1": { "$index": 0 ,"$hover_texture":"textures/menu/01","$pressed_texture":"textures/menu/01_pressed"} },
+            { "1@button1": { "$index": 1 ,"$hover_texture":"textures/menu/02","$pressed_texture":"textures/menu/02_pressed"} },
+            { "2@button1": { "$index": 2 ,"$hover_texture":"textures/menu/03","$pressed_texture":"textures/menu/03_pressed"} }
+            ]
+        }},
+        {"line2":{
+            "type":"stack_panel",
+            "size":["100%","33.33%"],
+            "orientation":"horizontal",
+            "collection_name": "form_buttons",
+            "controls":[
+            { "3@button2": { "$index": 3 ,"$hover_texture":"textures/menu/04","$pressed_texture":"textures/menu/04_pressed"} },
+            { "4@button3": { "$index": 4 ,"$hover_texture":"textures/menu/05","$pressed_texture":"textures/menu/05_pressed"} }
+            ]
+        }},
+        {"line3":{
+            "type":"stack_panel",
+            "size":["100%","33.33%"],
+            "orientation":"horizontal",
+            "collection_name": "form_buttons",
+            "controls":[
+            { "5@button1": { "$index": 5 ,"$hover_texture":"textures/menu/06","$pressed_texture":"textures/menu/06_pressed"} },
+            { "6@button1": { "$index": 6 ,"$hover_texture":"textures/menu/07","$pressed_texture":"textures/menu/07_pressed"} },
+            { "7@button1": { "$index": 7 ,"$hover_texture":"textures/menu/08","$pressed_texture":"textures/menu/08_pressed"} }
+            ]
+        }}
+        ]
+    },
+    "items_2": {
+        "type":"stack_panel",
+        "size":["50%","100%"],
+        "controls": [{"@form_main.ad":{}},{"@form_main.items_3":{}}]
+    },
+    "items_3": {
+        "type":"stack_panel",
+        "orientation":"horizontal",
+        "size":["100%","33.33%"],
+        "controls": [{"@form_main.mb":{}},{"@form_main.items_4":{}}]
+    },
+  "items_4": {
+        "type":"stack_panel",
+        "size":["26%","100%"],
+        "controls": [{"@form_main.camera":{}},{"@form_main.info":{}}]
+    },
+
+  "camera": {
+        "type":"stack_panel",
+        "size": ["100%","50%"],
+        "collection_name": "form_buttons",
+        "controls":[
+            { "@button6": { "$index": 10 ,"$hover_texture":"textures/menu/camera","$pressed_texture":"textures/menu/camera_pressed"} }
+            ]
+    },
+  "info":{
+        "type":"stack_panel",
+        "size": ["100%","50%"],
+        "collection_name": "form_buttons",
+        "controls":[
+            { "@button6": { "$index": 11 ,"$hover_texture":"textures/menu/info","$pressed_texture":"textures/menu/info_pressed"} }
+            ]
+     },
+  "mb":{
+        "type":"stack_panel",
+        "size": ["74%","100%"],
+        "collection_name": "form_buttons",
+        "controls":[
+            { "@button5": { "$index": 9 ,"$hover_texture":"textures/menu/message_board","$pressed_texture":"textures/menu/message_board_pressed"} }
+            ]
+     },
+  "ad": {
+    "type":"panel",
+    "size":["100%","66.67%"],
+    "controls": [{"@form_main.ad_border":{}},{"@form_main.ad_content":{}}]
+    },
+  "ad_border":{
+        "type":"stack_panel",
+        "size": ["100%","100%"],
+        "collection_name": "form_buttons",
+        "controls":[
+            { "@form_main.button4": { "$index": 8 ,"$hover_texture":"textures/menu/ad_border","$pressed_texture":"textures/menu/ad_border_pressed"} }
+            ],
+        "layer":1
+        },
+  "ad_content":{
+        "type":"image",
+        "texture": "textures/menu/ad/1",
+        "size":["97.1%","94.44%"],
+        "layer":0,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "doge_main",
+                "source_property_name": "#title",
+                "target_property_name": "#texture"
+            }
+        ]
+        },
+    "button1@button":{
+        "size": ["33.33%", "100%"]
+    },
+    "button2@button":{
+        "size": ["42%", "100%"]
+    },
+    "button3@button":{
+        "size": ["58%", "100%"]
+    },
+    "button4@button":{
+        "size": ["100%", "100%"]
+    },
+    "button5@button":{
+        "size": ["100%", "100%"]
+    },
+    "button6@button":{
+        "size": ["100%", "100%"]
+    },
+    "button@common.button": {
+        "collection_index": "$index",
+        "$pressed_button_name": "button.form_button_click",
+        "locked_control": "locked",
+        "controls": [
+            { "default@button_content": { "texture": "$hover_texture" } },
+            { "hover@button_content": { "texture": "$pressed_texture" } },
+            { "pressed@button_content": { "texture": "$pressed_texture" } },
+            { "locked@button_content": { "texture": "$pressed_texture" } }
+        ],
+        "bindings": [
+            { "binding_type": "collection_details", "binding_collection_name": "form_buttons" },
+            {
+                "binding_name": "#form_button_text",
+                "binding_name_override": "#text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#text < '$' or #text > '$􀐏' )",
+                "target_property_name": "#enabled"
+            },
+            { "binding_type": "view", "source_property_name": "(not (#text = ''))", "target_property_name": "#visible" }
+        ]
+    },
+    "button_content": { "type": "image", "size": ["100%","100%"]}
+}

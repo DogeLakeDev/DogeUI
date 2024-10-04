@@ -1,0 +1,94 @@
+{
+    "namespace": "server_form",
+    "third_party_server_screen@common.base_screen": {
+        "$screen_content": "server_form.main_screen_content",
+        "gamepad_cursor": true
+    },
+    "main_screen_content": {
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "server_form_factory": {
+                            "type": "factory",
+                            "control_ids": {
+                                "long_form": "long_form_replacement@doge_form.long_form_replacement",
+                                "custom_form": "custom_form_replacement@doge_form.custom_form_replacement"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "long_form": {
+        "size":"$longform_size",
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_control_name": "inside_header_panel",
+                        "source_property_name": "#doge_visible",
+                        "target_property_name": "#visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "long_form_panel": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(#title_text < '/' or #title_text > '/􀐏')",
+                        "target_property_name": "#doge_visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "custom_form": {
+        "size":"$customform_size",
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_control_name": "inside_header_panel",
+                        "source_property_name": "#doge_visible",
+                        "target_property_name": "#visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "custom_form_panel": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(#title_text < '/' or #title_text > '/􀐏')",
+                        "target_property_name": "#doge_visible"
+                    }
+                ]
+            }
+        ]
+    }
+}

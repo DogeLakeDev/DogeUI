@@ -1,0 +1,9 @@
+{
+    "namespace": "form_camera",
+    "main": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "offset":[0,0],
+        "controls": []
+    }
+}

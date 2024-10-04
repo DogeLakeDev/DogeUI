@@ -1,0 +1,145 @@
+{
+    "namespace": "doge_common",
+    "dialog_nocontent": {
+        "type": "panel",
+        "size": "$doge_longform_size",
+        "$child_control|default": "server_form.long_form_panel",
+        "$form_title": "#title_text",
+        "controls": [
+            {
+                "common_panel@doge_common.common_panel": {}
+            },
+            {
+                "panel_indent": {
+                    "type": "panel",
+                    "size": "$doge_panel_indent_size",
+                    "controls": [
+                        {
+                            "inside_header_panel@$child_control": {}
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text < '/' or #title_text > '/􀐏')",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "common_panel": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "header@doge_common.header": {}
+            },
+            {
+                "back@doge_common.background": {}
+            }
+        ]
+    },
+    "header": {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "$close_button_to_button_id": "button.exit_student",
+        "type": "image",
+        "layer": 1,
+        "size": [
+            "90%",
+            27
+        ],
+        "texture": "textures/menu/bg",
+        "controls": [
+            {
+                "close@close": {}
+            },
+            {
+                "title@title": {}
+            }
+        ]
+    },
+    "close@common.close_button": {
+        "type": "button",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "size": [
+            13,
+            13
+        ],
+        "$close_button_to_button_id": "button.menu_exit",
+        "controls": [
+            {
+                "default@common.close_button_panel": {
+                    "$close_button_texture": "textures/menu/exit"
+                }
+            },
+            {
+                "hover@common.close_button_panel": {
+                    "$close_button_texture": "textures/menu/exit"
+                }
+            },
+            {
+                "pressed@common.close_button_panel": {
+                    "$close_button_texture": "textures/menu/exit_pressed"
+                }
+            }
+        ]
+    },
+    "title": {
+        "type": "label",
+        "text": "$form_title",
+        "font_size": "large",
+        "font_scale_factor": 0.8,
+        "color": [
+            1,
+            1,
+            1
+        ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "text_alignment": "left",
+        "offset": [
+            0,
+            5
+        ],
+        "size": [
+            "100%",
+            "100%"
+        ]
+    },
+    "background": {
+        "texture": "textures/menu/bg",
+        "type": "image",
+        "layer": -2,
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "background_gradient": {
+                    "type": "custom",
+                    "renderer": "gradient_renderer",
+                    "color1": [
+                        0,
+                        0,
+                        0,
+                        0.1
+                    ],
+                    "color2": [
+                        0,
+                        0,
+                        0,
+                        0.6
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "title_region_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "region@title_region.main"
+            }
+        }
+    },
+    "jukebox_popup_text@hud.item_name_text_root": {
+        "visible":false
+    },
+    "bottom_right_info": {
+        "type": "panel",
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
+        "offset":[-6,-3],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "controls": [
+            {
+                "item_text_aligner": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
+                    "controls": [
+                        {
+                            "item_text_control": {
+                                "type": "panel",
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
+                                "controls": [
+                                    {
+                                        "item_text_label": {
+                                            "type": "label",
+                                            "max_size": [
+                                                200,
+                                                "default"
+                                            ],
+                                            "font_scale_factor":0.6,
+                                            "text_alignment": "right",
+                                            "layer": 31,
+                                            "color": [
+                                                1,
+                                                1,
+                                                1
+                                            ],
+                                            "text": "#text",
+                                            "alpha": 0.5,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#jukebox_text",
+                                                    //"binding_name": "#tip_text",
+                                                    "binding_name_override": "#text"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "root_panel": {
+        "bindings": [
+            {
+                "binding_name": "#hud_propagate_alpha",
+                "binding_name_override": "#propagateAlpha",
+                "binding_type": "global"
+            }
+        ],
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "@hud.title_region_factory": {}
+                    },
+                    {
+                        "@hud.bottom_right_info": {}
+                    }
+                ]
+            }
+        ]
+    },
+    "hud_title_text/title_frame": {
+        "ignored": "($title_text = 'r1' or $title_text = 'r2' or $title_text = 'r3' or $title_text = 'r4' or $title_text = 'r5' or $title_text = 'r6' or $title_text = 'r7' or $title_text = 'r8' or $title_text = 'r9' or $title_text = 'r10' or $title_text = 'r11')"
+    }
+}

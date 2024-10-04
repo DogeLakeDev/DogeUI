@@ -1,0 +1,94 @@
+{
+    "namespace": "title_region",
+    "main":{
+        "type":"panel",
+        "size":[93,47],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+            0,
+            12
+        ],
+        "controls":[
+            {"1@r1":{}},
+            {"2@r2":{}},
+            {"3@r3":{}},
+            {"4@r4":{}},
+            {"5@r5":{}},
+            {"6@r6":{}},
+            {"7@r7":{}},
+            {"8@r8":{}},
+            {"9@r9":{}},
+            {"10@r10":{}},
+            {"11@r11":{}}
+        ]
+    },
+    "r1": {
+        "type": "image",
+        "texture": "textures/title/regions/1",
+        "alpha": "@title_region.anim_title_alpha_in",
+        "size": ["100%","100%"],
+        "ignored": "(not ($title_text = 'r1'))"
+    },
+    "r2@r1": {
+        "texture": "textures/title/regions/2",
+        "ignored": "(not ($title_text = 'r2'))"
+    },
+    "r3@r1": {
+        "texture": "textures/title/regions/3",
+        "ignored": "(not ($title_text = 'r3'))"
+    },
+    "r4@r1": {
+        "texture": "textures/title/regions/4",
+        "ignored": "(not ($title_text = 'r4'))"
+    },
+    "r5@r1": {
+        "texture": "textures/title/regions/5",
+        "ignored": "(not ($title_text = 'r5'))"
+    },
+    "r6@r1": {
+        "texture": "textures/title/regions/6",
+        "ignored": "(not ($title_text = 'r6'))"
+    },
+    "r7@r1": {
+        "texture": "textures/title/regions/7",
+        "ignored": "(not ($title_text = 'r7'))"
+    },
+    "r8@r1": {
+        "texture": "textures/title/regions/8",
+        "ignored": "(not ($title_text = 'r8'))"
+    },
+    "r9@r1": {
+        "texture": "textures/title/regions/9",
+        "ignored": "(not ($title_text = 'r9'))"
+    },
+    "r10@r1": {
+        "texture": "textures/title/regions/10",
+        "ignored": "(not ($title_text = 'r10'))"
+    },
+    "r11@r1": {
+        "texture": "textures/title/regions/11",
+        "ignored": "(not ($title_text = 'r11'))"
+    },
+    "anim_title_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 1,
+        "from": 0,
+        "to": 1,
+        "next": "@title_region.anim_title_alpha_stay"
+    },
+    "anim_title_alpha_stay": {
+        "anim_type": "wait",
+        "duration": 2,
+        "next": "@title_region.anim_title_alpha_out"
+    },
+    "anim_title_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 1,
+        "from": 1,
+        "to": 0,
+        "destroy_at_end": "hud_title_text"
+    }
+}

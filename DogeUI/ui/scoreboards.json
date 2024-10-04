@@ -1,7 +1,0 @@
-{
-    "namespace": "scoreboard",
-    "scoreboard_sidebar": {
-        "type": "panel",
-        "ignored": true
-    }
-}

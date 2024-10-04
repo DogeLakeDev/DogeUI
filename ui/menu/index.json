@@ -1,0 +1,89 @@
+{
+    "namespace": "doge_form",
+  
+    "long_form_replacement": {
+      "type": "panel",
+      "size": [ "100%", "100%"],
+      "controls": [
+        { "doge_main@form_type": { "$min": "/D ", "$max":"/D 􀐏", "$content": "form_main.main" } },
+        { "doge_ad@form_type": { "$min": "/A ", "$max":"/A 􀐏", "$content": "ad.main" } },
+        { "doge_camera@form_type": { "$min": "/C ", "$max":"/C 􀐏", "$content": "form_camera.main" } }
+      ]
+    },
+    "custom_form_replacement": {
+      "type": "panel",
+      "size": [ "100%", "100%"],
+      "controls": [
+        { "text@form_type": { "$min": "/TEXT ", "$max":"/TEXT 􀐏", "$content": "form_text.main" } }
+      ]
+    },
+    "form_type": {
+      "type": "panel",
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "controls": [{ "content@$content": {} },{ "@copyright_info":{}}],
+      "visible": false,
+      "bindings": [
+        { "binding_name": "#title_text" },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#title_text = $min) or (#title_text > $min and #title_text < $max)",
+          "target_property_name": "#visible"
+        },
+        { "binding_type": "view", "source_property_name": "(#title_text - $min)", "target_property_name": "#title" }
+      ]
+    },
+    "copyright_info": {
+        "type": "panel",
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
+        "offset":[-6,-3],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "controls": [
+            {
+                "item_text_aligner": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
+                    "controls": [
+                        {
+                            "item_text_control": {
+                                "type": "panel",
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
+                                "controls": [
+                                    {
+                                        "item_text_label": {
+                                            "type": "label",
+                                            "max_size": [
+                                                200,
+                                                "default"
+                                            ],
+                                            "font_scale_factor":0.6,
+                                            "text_alignment": "right",
+                                            "layer": 31,
+                                            "color": [
+                                                1,
+                                                1,
+                                                1
+                                            ],
+                                            "text": "$doge_copyright_info",
+                                            "alpha": 0.5
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+  }
