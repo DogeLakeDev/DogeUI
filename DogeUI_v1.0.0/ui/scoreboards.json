@@ -1,0 +1,43 @@
+{
+    "namespace": "scoreboard",
+    "scoreboard_sidebar": {
+        "type": "panel",
+        "size": ["100%c", 0],
+        "$scoreboard_offset|default": [-8, 5],
+        "$scoreboard_alignment": "top_right",
+        "offset": "$scoreboard_offset",
+        "anchor_from": "$scoreboard_alignment",
+        "anchor_to": "$scoreboard_alignment",
+        //"ignored": "$scoreboards_feature_disabled",
+        "controls": [
+            {
+                "players": {
+                    "type": "stack_panel",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": ["100%c", "100%c"],
+                    "orientation": "horizontal",
+                    "collection_name": "scoreboard_players",
+                    "factory": {
+                        "name": "player_list_factory",
+                        "control_name": "informationbar.doge_style"
+                    },
+                    "bindings": [
+                        {
+                            "binding_name": "#scoreboard_sidebar_size",
+                            "binding_type": "global",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_name": "#scoreboard_sidebar_visible",
+                "binding_type": "global",
+                "binding_name_override": "#visible"
+            }
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "modal_dialog_popup": {
+        "modifications": [
+            {
+                "array_name": "variables",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "requires": "$two_buttons_visible",
+                        "$dogeui_message_form_show": true
+                    }
+                ]
+            },
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "dogeui_message_form@doge_message_form.main": {
+                            "ignored": "(not $dogeui_message_form_show)",
+                            "layer":100
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "modal_dialog_popup/modal_input":{
+        "ignored": "$dogeui_message_form_show"
+    }
+}

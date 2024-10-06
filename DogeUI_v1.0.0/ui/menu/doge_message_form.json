@@ -1,0 +1,143 @@
+{
+    "namespace": "doge_message_form",
+    "main@popup_dialog.modal_input_panel": {
+        "$show_black_background|default": false,
+        "controls": [
+            {
+                "modal_bg_buttons@doge_message_form.modal_dialog_with_buttons": {
+                    "$visibility_source_control_name|default": "modal_bg_buttons",
+                    "layer": 2
+                }
+            }
+        ]
+    },
+    "modal_dialog_with_buttons": {
+        "type": "panel",
+        "size": "$doge_message_form_size",
+        "controls": [
+            {
+                "background@doge_message_form.message_form_body": {}
+            },
+            {
+                "title@doge_message_form.message_form_title": {}
+            },
+            {
+                "text@doge_message_form.message_form_text": {}
+            },
+            {
+                "button_panel@doge_message_form.two_buttons_panel": {}
+            }
+        ]
+    },
+    "message_form_body":{
+        "type":"image",
+        "anchor_to": "top_middle",
+        "anchor_from": "top_middle",
+        "texture":"textures/menu/message_form_body",
+        "size":"$doge_message_form_body_size",
+        "fill":true
+    },
+    "message_form_title": {
+        "type": "label",
+        "offset": [0,30.5],
+        "size": [ 105, 17.5 ],
+        "anchor_to": "top_middle",
+        "anchor_from": "top_middle",
+        "text_alignment": "center",
+        "layer": 2,
+        "text": "#text",
+        "text_tts": "#tts_text",
+        "color": "$doge_message_form_title_text_color",
+        "shadow": false,
+        "bindings": [
+          {
+            "binding_type": "view",
+            "source_control_name": "$visibility_source_control_name",
+            "source_property_name": "#modal_title_text",
+            "target_property_name": "#text"
+          },
+          {
+            "binding_type": "view",
+            "source_control_name": "$visibility_source_control_name",
+            "source_property_name": "#modal_title_tts",
+            "target_property_name": "#tts_text"
+          }
+        ]
+  },
+  "message_form_text": {
+    "type": "stack_panel",
+    "size": [ 210, 82.5 ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [ 0, 0 ],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "layer": 2,
+          "text": "#text",
+          "text_tts": "#tts_text",
+          "color": "$doge_message_form_text_color",
+          "shadow": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$visibility_source_control_name",
+              "source_property_name": "#modal_label_text",
+              "target_property_name": "#text"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "$visibility_source_control_name",
+              "source_property_name": "#modal_label_tts",
+              "target_property_name": "#tts_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "two_buttons_panel": {
+    "type": "panel",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": "$doge_message_form_two_buttons_panel_size",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "left@doge_message_form.left_button": {} },
+      { "right@doge_message_form.rightcancel_button": {} }
+    ]
+  },
+    "left_button@common.button": {
+        "anchor_to": "left_middle",
+        "anchor_from": "left_middle",
+        "size": [ "50%-2.5px", "100%" ],
+        "$pressed_button_name": "$popup_dialog_left_button_name",
+        //"$button_text": "#modal_left_button_text",
+        "$left_focus_number|default": 0,
+        "default_focus_precedence": "$left_focus_number",
+        "$default_texture":"textures/menu/message_form_button1",
+        "$pressed_texture":"textures/menu/message_form_button1_pressed",
+        "locked_control": "locked",
+        "controls": [
+            { "default@button_content": { "texture": "$default_texture" } },
+            { "hover@button_content": { "texture": "$pressed_texture" } },
+            { "pressed@button_content": { "texture": "$pressed_texture" } },
+            { "locked@button_content": { "texture": "$pressed_texture" } }
+        ]
+  },
+    "rightcancel_button@doge_message_form.left_button": {
+        "anchor_to": "right_middle",
+        "anchor_from": "right_middle",
+        "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+        //"$button_text": "#modal_rightcancel_button_text",
+        "$right_focus_number|default": 1,
+        "default_focus_precedence": "$right_focus_number",
+        "$default_texture":"textures/menu/message_form_button2",
+        "$pressed_texture":"textures/menu/message_form_button2_pressed"
+  },
+  "button_content": { "type": "image", "size": ["100%","100%"],"layer":3}
+}

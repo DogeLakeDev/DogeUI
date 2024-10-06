@@ -1,0 +1,105 @@
+{
+    "namespace": "server_form",
+    "third_party_server_screen@common.base_screen": {
+        "$screen_animations|default": [
+
+            "@common.screen_exit_animation_push_fade",
+            "@common.screen_exit_animation_pop_fade",
+            "@common.screen_entrance_animation_push_fade",
+            "@common.screen_entrance_animation_pop_fade"
+        ],
+        "$screen_content": "server_form.main_screen_content",
+        "gamepad_cursor": true
+    },
+    "main_screen_content": {
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "server_form_factory": {
+                            "type": "factory",
+                            "control_ids": {
+                                "long_form": "long_form_replacement@doge_form.long_form_replacement",
+                                "custom_form": "custom_form_replacement@doge_form.custom_form_replacement"
+                            }
+                        }
+                    },
+                    {
+                        "background@doge_common.background": {}
+                    },
+                    {
+                        "copyright@doge_common.copyright_info": {}
+                    }
+                ]
+            }
+        ]
+    },
+    "long_form": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_control_name": "inside_header_panel",
+                        "source_property_name": "#doge_visible",
+                        "target_property_name": "#visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "long_form_panel": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(#title_text < '/' or #title_text > '/􀐏')",
+                        "target_property_name": "#doge_visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "custom_form": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_control_name": "inside_header_panel",
+                        "source_property_name": "#doge_visible",
+                        "target_property_name": "#visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "custom_form_panel": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(#title_text < '/' or #title_text > '/􀐏')",
+                        "target_property_name": "#doge_visible"
+                    }
+                ]
+            }
+        ]
+    }
+}

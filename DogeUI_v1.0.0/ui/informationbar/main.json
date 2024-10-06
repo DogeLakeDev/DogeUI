@@ -1,0 +1,41 @@
+{
+    "namespace":"informationbar",
+    
+    "doge_style": {
+        "type": "panel",
+        "size": ["100%cm + 3px", "100%cm"],
+        "draggable": "horizontal",
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text": "#player_name_sidebar",
+                    "shadow": true,
+                    "layer": 2,
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-6, 3],
+                    "font_size": "normal",
+                    "bindings": [
+                        {
+                            "binding_name": "#player_name_sidebar",
+                            "binding_type": "collection",
+                            "binding_collection_name": "scoreboard_players"
+                        }
+                    ]
+                }
+            },
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/hud_tip_text_background",
+                    "alpha": 0.6,
+                    "size": ["100%sm + 4px", "100%sm + 6px"],
+                    "offset": [-4, 0],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right"
+                }
+            }
+        ]
+    }
+}

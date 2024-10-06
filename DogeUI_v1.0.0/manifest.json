@@ -1,0 +1,24 @@
+{
+	"format_version":2,
+	"author":"DogeLakeDev",
+	"github":"https://github.com/DogeLakeDev/DogeUI",
+	"header":{
+		"name":"§l§eDoge§r§lUI §rv1.0.0",
+		"description":"一款为 BDS 服务器设计的通用 UI。\n作者：DogeLakeDeV\n唯一下载方式：github。",
+		"uuid":"06ffda58-af2d-2dd4-1c67-ccda23ea3e08",
+		"min_engine_version":[ 1, 20, 30 ],
+		"version":[1,0,0]
+	},
+	"modules":[
+		{
+			"description":"§l§eDoge§r§lUI",
+			"type":"resources",
+			"uuid":"c584dab8-2aca-3bf5-5257-de9bc4050364",
+			"version":[
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

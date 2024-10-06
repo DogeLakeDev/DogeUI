@@ -1,0 +1,14 @@
+{
+    "ui_defs": [
+        "ui/startscreen/doge_title.json",
+        "ui/informationbar/main.json",
+        "ui/menu/index.json",
+        "ui/menu/main.json",
+        "ui/menu/ad.json",
+        "ui/menu/text.json",
+        "ui/menu/camera.json",
+        "ui/menu/doge_common.json",
+        "ui/menu/doge_message_form.json",
+        "ui/title/region.json"
+    ]
+}

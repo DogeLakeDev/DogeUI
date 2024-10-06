@@ -1,0 +1,16 @@
+{
+   "format_version" : "1.14.0",
+   "sound_definitions" :{
+      "music.menu" : {
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/doge/title",
+               "stream" : true,
+               "volume" : 1
+            }
+         ]
+      }
+   }
+}

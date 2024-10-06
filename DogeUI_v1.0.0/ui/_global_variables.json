@@ -1,0 +1,19 @@
+{
+    "$doge_title_white": 0.5,
+    "$doge_title_center_in": 0.8,
+    "$doge_title_bottom_start": 0.3,
+    "$doge_title_bottom_in": 0.5,
+    
+    "$longform_size": [ 225, 200 ],
+    "$customform_size": [ 225, 200 ],
+    "$doge_panel_indent_size":["88%","39%x"],
+    
+    "$doge_message_form_size":[245,187.5],
+    "$doge_message_form_body_size":["100%",152.5],
+    "$doge_message_form_two_buttons_panel_size":[ "100%-5px", 32.5 ],
+    "$doge_message_form_title_text_color":[0.608, 0.365, 0.082],//#9B5D15FF
+    "$doge_message_form_text_color":[0.608, 0.365, 0.082],
+
+    "$doge_pause_text": "DogeUI 1.0.0\nby DogeLakeDev",
+    "$doge_copyright_info":"DogeUI 1.0.0\nby DogeLakeDev"
+}
