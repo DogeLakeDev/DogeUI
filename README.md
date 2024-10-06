@@ -1,6 +1,6 @@
 # DogeUI
 ![](./pack_icon.png)
-一款为 BDS 服务器设计的通用 UI。
+一款为 BDS 服务器设计的通用 UI。  
 ![GitHub Repo stars](https://img.shields.io/github/stars/DogeLakeDev/DogeUI)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/DogeLakeDev/DogeUI/total)
 ![GitHub contributors](https://img.shields.io/github/contributors/DogeLakeDev/DogeUI)
@@ -13,10 +13,12 @@
 - `Shiroha77`
 - `ENIACJushi`
 ## 🌠 展示
+
 ![](./mods.png)
 
 ## 🍔 组件
-| 模块名             | 介绍                                                                   | 分包链接                                                 | 是否弃用（停止更新） |
+
+| 组件名             | 介绍                                                                   | 分包链接                                                 | 是否弃用（停止更新） |
 |--------------------|------------------------------------------------------------------------|----------------------------------------------------------|----------------------|
 | DogeStartScreen    | 进服欢迎界面                                                           | https://www.minebbs.com/resources/6569/                  | 否                   |
 | DogeMenu           | 自定义菜单实例                                                         |                                                          | 否                   |
@@ -24,7 +26,7 @@
 | 自定义图片标题实例 | 自定义图片标题实例                                                     |                                                          | 否                   |
 | DogePauseScreen    | 暂停屏幕文字信息显示                                                   | https://www.minebbs.com/resources/dogepausescreen.6812/  | 否                   |
 | DogeChatInfo       | 在聊天屏幕增加一个按钮来展示图片，可以用于查看服务器常用指令或公告等。 | https://www.minebbs.com/resources/dogechatinfo.6828/     | 是                   |
-| DogePauseScreen    | 计分板顶部信息显示
+| DogePauseScreen    | 计分板顶部信息显示|否
 
 # 🎈 开源
     Copyright (C) 2024 DogeLakeDev
