@@ -23,9 +23,9 @@
 ## 🌠 原创内容展示
 
 信息表单设计
-![](./MessageForm.png)
+![](./MessageForm.jpg)
 东方犬明湖服务器主菜单设计
-![](./LongForm-Main.png)
+![](./LongForm-Main.jpg)
 组件一览
 ![](./mods.png)
 
