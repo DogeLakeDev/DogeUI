@@ -1,0 +1,32 @@
+{
+	"format_version": 2,
+	"author": "Shiroha7z",
+	"github": "https://github.com/DogeLakeDev/DogeUI",
+	"header": {
+		"name": "[DogeUI]HudInfo §lv1.1.0",
+		"description": "作者：Shiroha7z\n唯一下载方式：github\n请勿二次分发甚至倒卖本内容，违者必究",
+		"uuid": "e4b1ecee-256a-4ff3-ae29-db5c97dfd340",
+		"min_engine_version": [
+			1,
+			26,
+			10
+		],
+		"version": [
+			1,
+			1,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "[DogeUI]HudInfo §lv1.1.0",
+			"type": "resources",
+			"uuid": "b3052b3d-324a-4d95-9f4b-3cf2c0d1f0fa",
+			"version": [
+				1,
+				1,
+				0
+			]
+		}
+	]
+}

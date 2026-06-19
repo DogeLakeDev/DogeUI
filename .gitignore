@@ -1,0 +1,8 @@
+/#ForServer/
+
+DogeUI/node_modules/
+
+DogeUI/dist/
+# DogeUI/out/
+
+DogeUI/.vscode/

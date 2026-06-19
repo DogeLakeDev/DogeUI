@@ -1,0 +1,32 @@
+{
+	"format_version": 2,
+	"author": "Shiroha7z",
+	"github": "https://github.com/DogeLakeDev/DogeUI",
+	"header": {
+		"name": "[DogeUI]CustomMenu §lv1.1.0",
+		"description": "作者：Shiroha7z\n唯一下载方式：github\n请勿二次分发甚至倒卖本内容，违者必究",
+		"uuid": "f4400896-838a-42eb-8adf-35ffc3998b1a",
+		"min_engine_version": [
+			1,
+			26,
+			10
+		],
+		"version": [
+			1,
+			1,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "[DogeUI]CustomMenu §lv1.1.0",
+			"type": "resources",
+			"uuid": "24f099f1-30a4-422c-a18c-22a768cfe89e",
+			"version": [
+				1,
+				1,
+				0
+			]
+		}
+	]
+}

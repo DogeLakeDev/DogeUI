@@ -1,0 +1,14 @@
+{
+    "top_right_panel/pause_panel": {
+        "ignored": true
+    },
+    "pause_screen_content/skin_panel":{
+        "ignored": true
+    },
+    "menu_background/store_button_panel": {
+        "ignored": true
+    },
+    "menu_background/store_button_panel_padding": {
+        "ignored": true
+    }
+}

@@ -1,0 +1,32 @@
+{
+	"format_version": 2,
+	"author": "Shiroha7z",
+	"github": "https://github.com/DogeLakeDev/DogeUI",
+	"header": {
+		"name": "[DogeUI]PauseInfo §lv1.1.0",
+		"description": "作者：Shiroha7z\n唯一下载方式：github\n请勿二次分发甚至倒卖本内容，违者必究",
+		"uuid": "94910f00-53e2-4015-b9a0-58253426e709",
+		"min_engine_version": [
+			1,
+			26,
+			10
+		],
+		"version": [
+			1,
+			1,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "[DogeUI]PauseInfo §lv1.1.0",
+			"type": "resources",
+			"uuid": "e5552bfe-e7ab-405a-bdad-5e0e1e24ecac",
+			"version": [
+				1,
+				1,
+				0
+			]
+		}
+	]
+}

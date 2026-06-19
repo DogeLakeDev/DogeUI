@@ -1,0 +1,82 @@
+{
+    "namespace": "StartTitle",
+    "loading_background": {
+        "type": "image",
+        "layer": 1,
+        "tiled": true,
+        "tiled_scale": [ 2, 2 ],
+        "texture": "textures/black"
+    },
+    "title_center": {
+        "type": "image",
+        "bilinear": true,
+        "layer": 1,
+        "texture": "textures/title_center",
+        "size": [ "80%", "50%x" ],
+        "offset": [ 0, 0 ],
+        "alpha": "$anim_alpha_title_center"
+    },
+    "title_bottom": {
+        "type": "image",
+        "bilinear": true,
+        "layer": 2,
+        "texture": "textures/title_bottom",
+        "size": [ "77%", "35%x" ],
+        "offset": [ 0, "28%y" ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "alpha": "$anim_alpha_title_bottom"
+    },
+    "title_center_anim0": {
+            "anim_type": "alpha",
+            "easing": "out_quad",
+            "from": 0,
+            "to": 0,
+            "duration": "$bg_in",
+            "next": "@StartTitle.title_center_anim1"
+        },
+    "title_center_anim1": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$title_center_in"
+    },
+    "title_bottom_anim0": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 0,
+        "duration": "(($bg_in)+($title_bottom_wait))",
+        "next": "@StartTitle.title_center_anim1"
+    },
+    "title_bottom_anim1": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$title_bottom_in"
+    },
+    "progress_screen_content": {
+        "type": "panel",
+        "layer": 3,
+        "controls": [
+            { "center@StartTitle.title_center": {
+                "variables": [
+                    {
+                        "requires": true,
+                        "$anim_alpha_title_center": "@StartTitle.title_center_anim0"
+                    }
+                ]
+            } },
+            { "bottom@StartTitle.title_bottom": {
+                "variables": [
+                    {
+                        "requires": true,
+                        "$anim_alpha_title_bottom": "@StartTitle.title_bottom_anim0"
+                    }
+                ]
+            } }
+        ]
+    }    
+}

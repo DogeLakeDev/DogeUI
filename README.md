@@ -1,5 +1,6 @@
 # DogeUI
-![](./pack_icon.png)
+
+![icon](./pack_icon.png)
 一款为 BDS 服务器设计的通用 UI。  
 ![GitHub Repo stars](https://img.shields.io/github/stars/DogeLakeDev/DogeUI)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/DogeLakeDev/DogeUI/total)
@@ -23,26 +24,23 @@
 ## 🌠 原创内容展示
 
 信息表单设计
-![](./MessageForm.jpg)
+![MessageForm](./MessageForm.jpg)
 东方犬明湖服务器主菜单设计
-![](./LongForm-Main.jpg)
+![LongForm](./LongForm-Main.jpg)
 组件一览
-![](./mods.png)
+![Mods](./mods.png)
 
 ## 🍔 组件
 
-| 组件名             | 介绍                                                                   | 分包链接                                                 | 是否弃用（停止更新） |
-|--------------------|------------------------------------------------------------------------|----------------------------------------------------------|----------------------|
-| DogeStartScreen    | 进服欢迎界面                                                           | https://www.minebbs.com/resources/6569/                  | 否                   |
-| DogeMenu           | 自定义菜单实例                                                         |                                                          | 否                   |
-| 底部水印信息       | 底部水印信息                                                           |                                                          | 否                   |
-| 自定义图片标题实例 | 自定义图片标题实例                                                     |                                                          | 否                   |
-| DogePauseScreen    | 暂停屏幕文字信息显示                                                   | https://www.minebbs.com/resources/dogepausescreen.6812/  | 否                   |
-| DogeChatInfo       | 在聊天屏幕增加一个按钮来展示图片，可以用于查看服务器常用指令或公告等。 | https://www.minebbs.com/resources/dogechatinfo.6828/     | 是                   |
-| DogeInformationBar    | 计分板顶部信息显示 | https://www.minebbs.com/resources/information-bar.5208/ | 否
+| 组件名 |   简介   |
+|StartScreen||
+|CustomMenu||
+|HudInfo||
+|PauseContent||
+|ChatInfo||
+|I||
 
-
-# 🎈 开源
+## 🎈 开源信息
 
     Copyright (C) 2024 DogeLakeDev
 
@@ -58,4 +56,3 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
